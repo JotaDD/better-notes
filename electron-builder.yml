@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: better-notepad
+productName: better-notes
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: better-notepad
+  executableName: better-notes
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

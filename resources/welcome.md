@@ -6,38 +6,6 @@ You can create your first note by clicking on the top-left icon on the sidebar, 
 
 Following there's a quick overview of the currently supported Markdown syntax.
 
-An Electron application with React and TypeScript
-
-## Project Setup
-
-### Install
-
-```bash
-$ npm install
-```
-
-### Development
-
-```bash
-$ npm run dev
-```
-
-### Build
-
-```bash
-# For windows
-$ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
-```
----
-
-## Quick Overview
-
 ## Text formatting
 
 This is a **bold** text.

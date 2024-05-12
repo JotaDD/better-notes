@@ -1,11 +1,12 @@
-import { appDirName, fileEncoding } from '@shared/constants'
+import { appDirName, fileEncoding, welcomeNoteFilename } from '@shared/constants'
 import { NoteInfo } from '@shared/models'
 import { GetNotes, ReadNote, WriteNote } from '@shared/types'
 import { dialog } from 'electron'
 import { ensureDir, readdir, readFile, remove, stat, writeFile } from 'fs-extra'
+import { isEmpty } from 'lodash'
 import { homedir } from 'os'
 import path from 'path'
-
+import welcomeNoteFile from '../../../resources/welcome.md?asset'
 export const getRootDir = () => {
   return `${homedir()}/${appDirName}`
 }
@@ -21,6 +22,17 @@ export const getNotes: GetNotes = async () => {
   })
 
   const notes = notesFileNames.filter((fileName) => fileName.endsWith('.md'))
+
+  if (isEmpty(notes)) {
+    console.info('No notes found, creating a welcome note')
+
+    const content = await readFile(welcomeNoteFile, { encoding: fileEncoding })
+
+    // create the welcome note
+    await writeFile(`${rootDir}/${welcomeNoteFilename}`, content, { encoding: fileEncoding })
+
+    notes.push(welcomeNoteFilename)
+  }
 
   return Promise.all(notes.map(getNoteInfoFromFileName))
 }
