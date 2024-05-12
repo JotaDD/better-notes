@@ -18,6 +18,6 @@ export const selectedNoteAtom = atom((get) => {
 
   return {
     ...selectedNote,
-    content: `Hello from Note ${selectedNoteIndex}`
+    content: `## Hello from Note ${selectedNoteIndex}`
   }
 })
