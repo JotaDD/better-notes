@@ -6,3 +6,5 @@ export const emptyNote = {
   content: '',
   lastEditTime: Date.now()
 }
+
+export const placeholder = '# Welcome to BetterNotes \n ## Start typing and be happy! 🚀'
