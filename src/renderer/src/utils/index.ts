@@ -1,11 +1,11 @@
 import clsx, { ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-const currLanguage = navigator.language
+const currLanguage = window.context.locale
 const currTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
 const dateFormatter = new Intl.DateTimeFormat(currLanguage, {
-  dateStyle: 'medium',
+  dateStyle: 'short',
   timeStyle: 'short',
   timeZone: currTimezone
 })

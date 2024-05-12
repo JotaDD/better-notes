@@ -12,7 +12,7 @@
     @apply h-full;
     @apply select-none;
     @apply bg-transparent;
-    @apply font-sans antialiased text-white text-sm;
+    @apply font-sans antialiased text-white;
     @apply overflow-hidden;
   }
 
