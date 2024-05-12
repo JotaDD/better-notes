@@ -1,4 +1,11 @@
+import { Content, RootLayout, Sidebar } from '@/components'
+
 const App = () => {
-  return <div className=" bg-zinc-900 bg-opacity-10">App</div>
+  return (
+    <RootLayout>
+      <Sidebar className="p-2 ">Sidebar</Sidebar>
+      <Content className="">Content</Content>
+    </RootLayout>
+  )
 }
 export default App
