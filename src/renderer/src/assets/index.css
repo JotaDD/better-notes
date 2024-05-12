@@ -12,10 +12,9 @@
     @apply h-full;
     @apply select-none;
     @apply bg-transparent;
-    @apply font-mono antialiased text-white text-sm;
+    @apply font-sans antialiased text-white text-sm;
     @apply overflow-hidden;
-    @apply outline-none;
-    @apply border rounded-['7px'];
   }
+
 
 }
