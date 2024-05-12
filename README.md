@@ -25,13 +25,13 @@ $ npm run dev
 ### Build
 
 ```bash
-# For windows
+# For windows (Still working on it)
 $ npm run build:win
 
-# For macOS
+# For macOS ( Most stable build)
 $ npm run build:mac
 
-# For Linux
+# For Linux (Still working on it)
 $ npm run build:linux
 ```
 ---
